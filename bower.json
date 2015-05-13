@@ -1,0 +1,9 @@
+{
+  "name": "waitstaff-calculator-2",
+  "version": "0.0.0",
+  "authors": [
+    "Andrew Pyle <andy.pyle@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT"
+}
