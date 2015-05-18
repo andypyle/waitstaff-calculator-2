@@ -3,27 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<base href="/" />
 	<title>Waitstaff Calculator</title>
 
 	<!-- Vendor CSS -->
-	<!-- - Materialize CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+	<!-- - Brick.im font. Muli. -->
+	<link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Muli:300,400,700">
 	
 	<!-- - FontAwesome CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<!-- My CSS -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body ng-app="wsCalc">
 	
 	<header>
-		<div class="row"></div>
-		<nav></nav>
+		<div class="row">
+			<h1>
+				Waitstaff Calculator
+			</h1>
+		</div>
+		<nav class="row">
+			<ul class="nav">
+				<li>
+					<a href="/"><i class="fa fa-home fa-lg"></i> Home</a>
+				</li>
+				<li>
+					<a href="/new-meal"><i class="fa fa-plus-square fa-lg"></i> New Meal</a>
+				</li>
+				<li>
+					<a href="/my-earnings"><i class="fa fa-usd fa-lg"></i> My Earnings</a>
+				</li>
+			</ul>			
+		</nav>
 	</header>
 
 	<main>
-		
+		<div class="container">
+			<div ng-view class="viewTransitions velocity-opposites-transition-slideUpBigIn"></div>
+		</div>
 	</main>
 
 	<footer>
@@ -32,6 +51,11 @@
 
 	<!-- Scripts before body end. -->
 	<!-- Vendor JS -->
+	<!-- - VelocityJS -->
+	<script src="bower_components/velocity/velocity.min.js"></script>
+
+		<!-- - - Velocity UI -->
+		<script src="bower_components/velocity/velocity.ui.min.js"></script>
 
 	<!-- - Angular JS -->
 	<script src="bower_components/angular/angular.js"></script>
@@ -39,6 +63,14 @@
 		<!-- - - ngRoute -->
 		<script src="bower_components/angular-route/angular-route.js"></script>
 	
+		<!-- - - ngAnimate -->
+		<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+
+		<!-- - - Angular Velocity -->
+		<script src="bower_components/angular-velocity/angular-velocity.min.js"></script>
+
+	
+
 	<!-- My JS -->
 	<script src="app/app.js"></script>	
 </body>
